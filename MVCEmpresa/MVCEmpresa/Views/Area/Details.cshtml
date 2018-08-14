@@ -1,0 +1,26 @@
+﻿@model MVCEmpresa.Models.area
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>area</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.are_des)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.are_des)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.are_cod }) |
+    @Html.ActionLink("Regresar a la lista", "Index")
+</p>
