@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bd_validarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="curso">
+    <Key>
+      <PropertyRef Name="codigo_c" />
+    </Key>
+    <Property Name="codigo_c" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_c" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="correo_c" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="credito_c" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="usuario_u" />
+    </Key>
+    <Property Name="usuario_u" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="clave_u" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="nombreusuario_u" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="bd_validarModelStoreContainer">
+    <EntitySet Name="curso" EntityType="Self.curso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

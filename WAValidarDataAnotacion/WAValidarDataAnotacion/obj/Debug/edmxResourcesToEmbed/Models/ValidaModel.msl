@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bd_validarModelStoreContainer" CdmEntityContainer="bd_validarEntities">
+    <EntitySetMapping Name="curso">
+      <EntityTypeMapping TypeName="bd_validarModel.curso">
+        <MappingFragment StoreEntitySet="curso">
+          <ScalarProperty Name="codigo_c" ColumnName="codigo_c" />
+          <ScalarProperty Name="nombre_c" ColumnName="nombre_c" />
+          <ScalarProperty Name="correo_c" ColumnName="correo_c" />
+          <ScalarProperty Name="credito_c" ColumnName="credito_c" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="bd_validarModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="nombreusuario_u" ColumnName="nombreusuario_u" />
+          <ScalarProperty Name="clave_u" ColumnName="clave_u" />
+          <ScalarProperty Name="usuario_u" ColumnName="usuario_u" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WAValidarDataAnotacion.Models.curso>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>listado de cursos</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo curso", "CrearCurso")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.codigo_c)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_c)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correo_c)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.credito_c)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo_c)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_c)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.correo_c)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.credito_c)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
